@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="DataScience" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DataScience.csproj" t="IncludeRecursive" />
+        <e p="Importer.cs" t="Include" />
+        <e p="ItemItem.cs" t="Include" />
+        <e p="itemItem.data" t="Include" />
+        <e p="NearestNeighbours.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="DataScience.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="PredictingRatings.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="ratings.csv" t="Include" />
+        <e p="Similarity.cs" t="Include" />
+        <e p="userItem.data" t="Include" />
+      </e>
+      <e p="DataScience.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_DataScience.1646149129.00" t="ExcludeRecursive" />
+  </component>
+</project>

@@ -1,0 +1,14 @@
+/Users/remcovisser/Documents/DataScience/DataScience/bin/Debug/netcoreapp2.2/DataScience.deps.json
+/Users/remcovisser/Documents/DataScience/DataScience/bin/Debug/netcoreapp2.2/DataScience.runtimeconfig.json
+/Users/remcovisser/Documents/DataScience/DataScience/bin/Debug/netcoreapp2.2/DataScience.runtimeconfig.dev.json
+/Users/remcovisser/Documents/DataScience/DataScience/bin/Debug/netcoreapp2.2/DataScience.dll
+/Users/remcovisser/Documents/DataScience/DataScience/bin/Debug/netcoreapp2.2/DataScience.pdb
+/Users/remcovisser/Documents/DataScience/DataScience/obj/Debug/netcoreapp2.2/DataScience.csprojAssemblyReference.cache
+/Users/remcovisser/Documents/DataScience/DataScience/obj/Debug/netcoreapp2.2/DataScience.csproj.CoreCompileInputs.cache
+/Users/remcovisser/Documents/DataScience/DataScience/obj/Debug/netcoreapp2.2/DataScience.AssemblyInfoInputs.cache
+/Users/remcovisser/Documents/DataScience/DataScience/obj/Debug/netcoreapp2.2/DataScience.AssemblyInfo.cs
+/Users/remcovisser/Documents/DataScience/DataScience/obj/Debug/netcoreapp2.2/DataScience.dll
+/Users/remcovisser/Documents/DataScience/DataScience/obj/Debug/netcoreapp2.2/DataScience.pdb
+/Users/remcovisser/Documents/DataScience/DataScience/bin/Debug/netcoreapp2.2/ratings.csv
+/Users/remcovisser/Documents/DataScience/DataScience/bin/Debug/netcoreapp2.2/userItem.data
+/Users/remcovisser/Documents/DataScience/DataScience/bin/Debug/netcoreapp2.2/itemItem.data
