@@ -25,7 +25,7 @@ namespace DataScience.Part1
         // Filter out the information about the rating and product for an user if the user has not rated the current product
         private Dictionary<double, double> FilterOutRatingsIfUserDidNotRateProduct()
         {
-            Dictionary<double, double> parsed_ratings = new Dictionary<double, double>();
+            Dictionary<double, double> parsedRatings = new Dictionary<double, double>();
             foreach (KeyValuePair<int, double> similarity in similarities)
             {
                 foreach (KeyValuePair<int, Dictionary<int, double>> rating in data)
@@ -33,32 +33,31 @@ namespace DataScience.Part1
                     if (rating.Key == similarity.Key && data.ContainsKey(rating.Key) &&
                         data[rating.Key].ContainsKey(product_id))
                     {
-                        // TODO: Fix this -> if rating.key is not unique (same similarity) it fails --> Transform to user_id with dictionary
-                        parsed_ratings.Add(similarity.Value, data[rating.Key][product_id]);
+                        parsedRatings.Add(similarity.Value, data[rating.Key][product_id]);
                     }
                 }
             }
 
-            return parsed_ratings;
+            return parsedRatings;
         }
 
         public double DoCalculation()
         {
             similarities = new NearestNeighbours(distance, data, user_id).DoCalculation().GetResult();
-            Dictionary<double, double> ratings_parsed = FilterOutRatingsIfUserDidNotRateProduct();
-            double sum_of_similarity = ratings_parsed.Keys.Sum();
+            Dictionary<double, double> ratingsParsed = FilterOutRatingsIfUserDidNotRateProduct();
+            double sumOfSimilarity = ratingsParsed.Keys.Sum();
 
             List<double> influences = new List<double>();
-            foreach (KeyValuePair<double, double> rating_parsed in ratings_parsed)
+            foreach (KeyValuePair<double, double> ratingParsed in ratingsParsed)
             {
-                influences.Add(rating_parsed.Key / sum_of_similarity);
+                influences.Add(ratingParsed.Key / sumOfSimilarity);
             }
 
             List<double> weighted = new List<double>();
             int i = 0;
-            foreach (KeyValuePair<double, double> rating_parsed in ratings_parsed)
+            foreach (KeyValuePair<double, double> ratingParsed in ratingsParsed)
             {
-                weighted.Add(rating_parsed.Value * influences[i]);
+                weighted.Add(ratingParsed.Value * influences[i]);
                 i++;
             }
 

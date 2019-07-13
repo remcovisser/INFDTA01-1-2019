@@ -5,6 +5,6 @@ namespace DataScience.Formulas
 {
     public interface InterfaceDistance
     {
-        double CalculateDistnace(Tuple<List<double>, List<double>> parsed_ratings);
+        double CalculateDistance(Tuple<List<double>, List<double>> parsedRatings);
     }
 }

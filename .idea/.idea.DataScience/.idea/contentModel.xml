@@ -26,10 +26,10 @@
           </e>
         </e>
         <e p="Part1" t="Include">
+          <e p="Coefficient.cs" t="Include" />
           <e p="FilterValues.cs" t="Include" />
           <e p="NearestNeighbours.cs" t="Include" />
           <e p="PredictingRatings.cs" t="Include" />
-          <e p="Similarity.cs" t="Include" />
         </e>
         <e p="Part2" t="Include">
           <e p="ItemItem.cs" t="Include" />

@@ -2,36 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6f6caa2-9d99-4931-a413-5f29921efb31" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DataScience/Data/itemItem2.data" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataScience/Formulas/Cosine.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataScience/Formulas/Euclidean.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataScience/Formulas/InterfaceDistance.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataScience/Formulas/Pearson.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataScience/Part1/FilterValues.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataScience/Part1/NearestNeighbours.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataScience/Part1/Similarity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataScience/Part2/Normalize.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataScience/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataScience/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataScience/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataScience/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataScience/DataScience.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/DataScience.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataScience/Importer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Importer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataScience/ItemItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Part2/ItemItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataScience/NearestNeighbours.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataScience/PredictingRatings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Part1/PredictingRatings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataScience/Formulas/Cosine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Formulas/Cosine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataScience/Formulas/Euclidean.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Formulas/Euclidean.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataScience/Formulas/InterfaceDistance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Formulas/InterfaceDistance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataScience/Formulas/Pearson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Formulas/Pearson.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataScience/Part1/FilterValues.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Part1/FilterValues.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataScience/Part1/NearestNeighbours.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Part1/NearestNeighbours.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataScience/Part1/PredictingRatings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Part1/PredictingRatings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataScience/Part1/Similarity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Part1/Coefficient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataScience/Part2/Normalize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Part2/Normalize.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataScience/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataScience/Similarity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Similarity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataScience/bin/Debug/netcoreapp2.2/DataScience.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/bin/Debug/netcoreapp2.2/DataScience.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataScience/bin/Debug/netcoreapp2.2/DataScience.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/bin/Debug/netcoreapp2.2/DataScience.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataScience/bin/Debug/netcoreapp2.2/itemItem.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataScience/bin/Debug/netcoreapp2.2/ratings.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataScience/bin/Debug/netcoreapp2.2/userItem.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataScience/itemItem.data" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Data/itemItem.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataScience/obj/Debug/netcoreapp2.2/DataScience.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/obj/Debug/netcoreapp2.2/DataScience.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataScience/obj/Debug/netcoreapp2.2/DataScience.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/obj/Debug/netcoreapp2.2/DataScience.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataScience/obj/Debug/netcoreapp2.2/DataScience.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/obj/Debug/netcoreapp2.2/DataScience.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataScience/obj/Debug/netcoreapp2.2/DataScience.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/obj/Debug/netcoreapp2.2/DataScience.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataScience/ratings.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Data/ratings.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataScience/userItem.data" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Data/userItem.data" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,67 +28,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DataScience/Program.cs">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataScience/Formulas/Pearson.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="304">
+              <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
               <folding>
-                <marker date="1563033308639" expanded="true" signature="6:145" ph="..." />
-                <marker date="1563033308639" expanded="true" signature="168:5216" ph="{...}" />
-                <marker date="1563033308639" expanded="true" signature="190:5214" ph="{...}" />
-                <marker date="1563033308639" expanded="true" signature="243:4504" ph="{...}" />
-                <marker date="1563033308639" expanded="true" signature="3773:4283" ph="{...}" />
-                <marker date="1563033308639" expanded="true" signature="3915:4269" ph="{...}" />
-                <marker date="1563033308639" expanded="true" signature="4023:4251" ph="{...}" />
-                <marker date="1563033308639" expanded="true" signature="4607:5208" ph="{...}" />
-                <marker date="1563033308639" expanded="true" signature="4889:5089" ph="{...}" />
-                <marker date="1563033308639" expanded="true" signature="4966:5067" ph="{...}" />
+                <marker date="1563038024464" expanded="true" signature="6:47" ph="..." />
+                <marker date="1563038024464" expanded="true" signature="79:1623" ph="{...}" />
+                <marker date="1563038024464" expanded="true" signature="126:1621" ph="{...}" />
+                <marker date="1563038024464" expanded="true" signature="221:1615" ph="{...}" />
+                <marker date="1563038024464" expanded="true" signature="692:999" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataScience/Importer.cs">
+        <entry file="file://$PROJECT_DIR$/DataScience/Part1/Coefficient.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            <state relative-caret-position="494">
+              <caret line="28" column="45" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="45" />
               <folding>
-                <marker date="1563023670157" expanded="false" signature="6:64" ph="..." />
-                <marker date="1563023670157" expanded="true" signature="87:3178" ph="{...}" />
-                <marker date="1563023670157" expanded="true" signature="115:3176" ph="{...}" />
-                <marker date="1563023670157" expanded="true" signature="201:1482" ph="{...}" />
-                <marker date="1563023670157" expanded="true" signature="464:1446" ph="{...}" />
-                <marker date="1563023670157" expanded="true" signature="676:742" ph="{...}" />
-                <marker date="1563023670157" expanded="true" signature="1085:1243" ph="{...}" />
-                <marker date="1563023670157" expanded="true" signature="1592:1815" ph="{...}" />
-                <marker date="1563023670157" expanded="true" signature="1902:3170" ph="{...}" />
-                <marker date="1563023670157" expanded="true" signature="2087:3134" ph="{...}" />
-                <marker date="1563023670157" expanded="true" signature="2199:3120" ph="{...}" />
-                <marker date="1563023670157" expanded="true" signature="2710:2901" ph="{...}" />
+                <marker date="1563038073336" expanded="false" signature="6:75" ph="..." />
+                <marker date="1563038073336" expanded="true" signature="104:872" ph="{...}" />
+                <marker date="1563038073336" expanded="true" signature="135:870" ph="{...}" />
+                <marker date="1563038073336" expanded="true" signature="361:742" ph="{...}" />
+                <marker date="1563038073336" expanded="true" signature="518:618" ph="{...}" />
+                <marker date="1563038073336" expanded="true" signature="635:732" ph="{...}" />
+                <marker date="1563038073336" expanded="true" signature="781:864" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataScience/Part1/PredictingRatings.cs">
+        <entry file="file://$PROJECT_DIR$/DataScience/Part1/FilterValues.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+            <state relative-caret-position="1634">
+              <caret line="88" column="1" lean-forward="true" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
               <folding>
-                <marker date="1563033344473" expanded="false" signature="6:94" ph="..." />
-                <marker date="1563033344473" expanded="true" signature="123:2612" ph="{...}" />
-                <marker date="1563033344473" expanded="true" signature="160:2610" ph="{...}" />
-                <marker date="1563033344473" expanded="true" signature="498:664" ph="{...}" />
-                <marker date="1563033344473" expanded="true" signature="875:1675" ph="{...}" />
-                <marker date="1563033344473" expanded="true" signature="1050:1629" ph="{...}" />
-                <marker date="1563033344473" expanded="true" signature="1148:1615" ph="{...}" />
-                <marker date="1563033344473" expanded="true" signature="1320:1597" ph="{...}" />
-                <marker date="1563033344473" expanded="true" signature="1714:2604" ph="{...}" />
-                <marker date="1563033344473" expanded="true" signature="2134:2233" ph="{...}" />
-                <marker date="1563033344473" expanded="true" signature="2396:2512" ph="{...}" />
+                <marker date="1563038073333" expanded="false" signature="6:66" ph="..." />
+                <marker date="1563038073333" expanded="true" signature="95:3059" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="127:3057" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="318:402" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="577:1285" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="791:1176" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="880:1162" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="962:1144" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="1410:3051" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="1660:2245" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="1737:1839" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="1903:2231" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="1969:2083" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="2108:2213" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="2299:2884" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="2376:2478" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="2542:2870" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="2608:2722" ph="{...}" />
+                <marker date="1563038073333" expanded="true" signature="2747:2852" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -110,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataScience/Part2/ItemItem.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+            <state relative-caret-position="686">
+              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
               <folding>
                 <marker date="1563033344466" expanded="false" signature="6:47" ph="..." />
                 <marker date="1563033344466" expanded="true" signature="76:5516" ph="{...}" />
@@ -143,16 +128,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataScience/Part2/Normalize.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+            <state relative-caret-position="266">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding>
-                <marker date="1563033344469" expanded="true" signature="27:415" ph="{...}" />
-                <marker date="1563033344469" expanded="true" signature="56:413" ph="{...}" />
-                <marker date="1563033344469" expanded="true" signature="154:233" ph="{...}" />
-                <marker date="1563033344469" expanded="true" signature="328:407" ph="{...}" />
+                <marker date="1563038416148" expanded="true" signature="27:413" ph="{...}" />
+                <marker date="1563038416148" expanded="true" signature="56:411" ph="{...}" />
+                <marker date="1563038416148" expanded="true" signature="154:233" ph="{...}" />
+                <marker date="1563038416148" expanded="true" signature="328:405" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -161,102 +146,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataScience/Part1/NearestNeighbours.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-762">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            <state relative-caret-position="-297">
+              <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
               <folding>
-                <marker date="1563033344471" expanded="true" signature="6:94" ph="..." />
-                <marker date="1563033344471" expanded="true" signature="123:2563" ph="{...}" />
-                <marker date="1563033344471" expanded="true" signature="160:2561" ph="{...}" />
-                <marker date="1563033344471" expanded="true" signature="623:821" ph="{...}" />
-                <marker date="1563033344471" expanded="true" signature="871:1323" ph="{...}" />
-                <marker date="1563033344471" expanded="true" signature="1012:1222" ph="{...}" />
-                <marker date="1563033344471" expanded="true" signature="1060:1208" ph="{...}" />
-                <marker date="1563033344471" expanded="true" signature="1375:1427" ph="{...}" />
-                <marker date="1563033344471" expanded="true" signature="1527:2237" ph="{...}" />
-                <marker date="1563033344471" expanded="true" signature="1736:2085" ph="{...}" />
-                <marker date="1563033344471" expanded="true" signature="1986:2071" ph="{...}" />
-                <marker date="1563033344471" expanded="true" signature="2280:2555" ph="{...}" />
-                <marker date="1563033344471" expanded="true" signature="2378:2545" ph="{...}" />
+                <marker date="1563038329312" expanded="false" signature="6:94" ph="..." />
+                <marker date="1563038329312" expanded="true" signature="123:2486" ph="{...}" />
+                <marker date="1563038329312" expanded="true" signature="160:2484" ph="{...}" />
+                <marker date="1563038329312" expanded="true" signature="601:777" ph="{...}" />
+                <marker date="1563038329312" expanded="true" signature="827:1266" ph="{...}" />
+                <marker date="1563038329312" expanded="true" signature="968:1172" ph="{...}" />
+                <marker date="1563038329312" expanded="true" signature="1015:1158" ph="{...}" />
+                <marker date="1563038329312" expanded="true" signature="1318:1365" ph="{...}" />
+                <marker date="1563038329312" expanded="true" signature="1464:2168" ph="{...}" />
+                <marker date="1563038329312" expanded="true" signature="1670:2017" ph="{...}" />
+                <marker date="1563038329312" expanded="true" signature="1918:2003" ph="{...}" />
+                <marker date="1563038329312" expanded="true" signature="2203:2478" ph="{...}" />
+                <marker date="1563038329312" expanded="true" signature="2301:2468" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataScience/Formulas/Cosine.cs">
+        <entry file="file://$PROJECT_DIR$/DataScience/Part1/PredictingRatings.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+            <state relative-caret-position="1140">
+              <caret line="63" column="54" lean-forward="true" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="54" />
               <folding>
-                <marker date="1563023668311" expanded="false" signature="6:61" ph="..." />
-                <marker date="1563023668311" expanded="true" signature="93:1075" ph="{...}" />
-                <marker date="1563023668311" expanded="true" signature="139:1073" ph="{...}" />
-                <marker date="1563023668311" expanded="true" signature="235:1067" ph="{...}" />
-                <marker date="1563023668311" expanded="true" signature="692:927" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataScience/Part1/Similarity.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-              <folding>
-                <marker date="1563033344475" expanded="false" signature="6:75" ph="..." />
-                <marker date="1563033344475" expanded="true" signature="104:870" ph="{...}" />
-                <marker date="1563033344475" expanded="true" signature="134:868" ph="{...}" />
-                <marker date="1563033344475" expanded="true" signature="359:740" ph="{...}" />
-                <marker date="1563033344475" expanded="true" signature="516:616" ph="{...}" />
-                <marker date="1563033344475" expanded="true" signature="633:730" ph="{...}" />
-                <marker date="1563033344475" expanded="true" signature="779:862" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataScience/Part1/FilterValues.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <marker date="1563033308632" expanded="false" signature="6:66" ph="..." />
-                <marker date="1563033308632" expanded="true" signature="95:3099" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="127:3097" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="318:402" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="577:1297" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="795:1184" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="884:1170" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="966:1152" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="1422:3091" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="1676:2271" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="1755:1859" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="1925:2257" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="1991:2107" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="2132:2239" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="2325:2920" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="2404:2508" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="2574:2906" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="2640:2756" ph="{...}" />
-                <marker date="1563033308632" expanded="true" signature="2781:2888" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataScience/Formulas/Euclidean.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-              <folding>
-                <marker date="1563024395517" expanded="true" signature="6:47" ph="..." />
-                <marker date="1563024395517" expanded="true" signature="79:796" ph="{...}" />
-                <marker date="1563024395517" expanded="true" signature="128:794" ph="{...}" />
-                <marker date="1563024395517" expanded="true" signature="224:788" ph="{...}" />
-                <marker date="1563024395517" expanded="true" signature="559:665" ph="{...}" />
+                <marker date="1563038371144" expanded="false" signature="6:94" ph="..." />
+                <marker date="1563038371144" expanded="true" signature="123:2456" ph="{...}" />
+                <marker date="1563038371144" expanded="true" signature="160:2454" ph="{...}" />
+                <marker date="1563038371144" expanded="true" signature="498:664" ph="{...}" />
+                <marker date="1563038371144" expanded="true" signature="875:1531" ph="{...}" />
+                <marker date="1563038371144" expanded="true" signature="1049:1486" ph="{...}" />
+                <marker date="1563038371144" expanded="true" signature="1147:1472" ph="{...}" />
+                <marker date="1563038371144" expanded="true" signature="1319:1454" ph="{...}" />
+                <marker date="1563038371144" expanded="true" signature="1570:2448" ph="{...}" />
+                <marker date="1563038371144" expanded="true" signature="1984:2080" ph="{...}" />
+                <marker date="1563038371144" expanded="true" signature="2241:2356" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -269,7 +196,11 @@
       <find>1029</find>
       <find>PredictingRatings</find>
       <find>DistanceToSimilarity</find>
+      <find>data_movielens</find>
     </findStrings>
+    <replaceStrings>
+      <replace>dataMovieLens</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -286,7 +217,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8335BAF6-0077-4CFE-A29E-A01CC7AB0A5D/1f/f616e1e7/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataScience/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataScience/Similarity.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DataScience/Part1/Similarity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataScience/Part1/Coefficient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8335BAF6-0077-4CFE-A29E-A01CC7AB0A5D/cd/c5faffe0/Number.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataScience/Part2/ItemItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataScience/Part2/Normalize.cs" root0="FORCE_HIGHLIGHTING" />
@@ -300,26 +231,27 @@
         <option value="$PROJECT_DIR$/DataScience/userItem2.data" />
         <option value="$PROJECT_DIR$/DataScience/itemItem.data" />
         <option value="$PROJECT_DIR$/DataScience/itemItem2.data" />
-        <option value="$PROJECT_DIR$/DataScience/Formulas/Cosine.cs" />
-        <option value="$PROJECT_DIR$/DataScience/Formulas/InterfaceDistance.cs" />
         <option value="$PROJECT_DIR$/DataScience/Importer.cs" />
         <option value="$PROJECT_DIR$/DataScience/ItemItem.cs" />
         <option value="$PROJECT_DIR$/DataScience/Similarity.cs" />
-        <option value="$PROJECT_DIR$/DataScience/Formulas/Euclidean.cs" />
-        <option value="$PROJECT_DIR$/DataScience/Formulas/Pearson.cs" />
         <option value="$PROJECT_DIR$/DataScience/UserItem/FilterValues.cs" />
         <option value="$PROJECT_DIR$/DataScience/UserItem/Similarity.cs" />
         <option value="$PROJECT_DIR$/DataScience/UserItem/PredictingRatings.cs" />
         <option value="$PROJECT_DIR$/DataScience/NearestNeighbours.cs" />
         <option value="$PROJECT_DIR$/DataScience/ItemItem/Normalize.cs" />
         <option value="$PROJECT_DIR$/DataScience/ItemItem/ItemItem.cs" />
-        <option value="$PROJECT_DIR$/DataScience/Program.cs" />
-        <option value="$PROJECT_DIR$/DataScience/Part1/FilterValues.cs" />
-        <option value="$PROJECT_DIR$/DataScience/Part1/PredictingRatings.cs" />
         <option value="$PROJECT_DIR$/DataScience/Part1/Similarity.cs" />
         <option value="$PROJECT_DIR$/DataScience/Part2/ItemItem.cs" />
-        <option value="$PROJECT_DIR$/DataScience/Part2/Normalize.cs" />
+        <option value="$PROJECT_DIR$/DataScience/Program.cs" />
+        <option value="$PROJECT_DIR$/DataScience/Formulas/InterfaceDistance.cs" />
+        <option value="$PROJECT_DIR$/DataScience/Formulas/Cosine.cs" />
+        <option value="$PROJECT_DIR$/DataScience/Formulas/Euclidean.cs" />
+        <option value="$PROJECT_DIR$/DataScience/Formulas/Pearson.cs" />
+        <option value="$PROJECT_DIR$/DataScience/Part1/Coefficient.cs" />
+        <option value="$PROJECT_DIR$/DataScience/Part1/FilterValues.cs" />
         <option value="$PROJECT_DIR$/DataScience/Part1/NearestNeighbours.cs" />
+        <option value="$PROJECT_DIR$/DataScience/Part1/PredictingRatings.cs" />
+        <option value="$PROJECT_DIR$/DataScience/Part2/Normalize.cs" />
       </list>
     </option>
   </component>
@@ -444,12 +376,12 @@
       <workItem from="1557843760382" duration="168000" />
       <workItem from="1561377532761" duration="73000" />
       <workItem from="1561377976463" duration="234000" />
-      <workItem from="1563015477866" duration="9906000" />
+      <workItem from="1563015477866" duration="11703000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31196000" />
+    <option name="totallyTimeSpent" value="32993000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -462,15 +394,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1892552" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1892552" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -839,18 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataScience/Formulas/InterfaceDistance.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-          <folding>
-            <marker date="1563023668325" expanded="true" signature="6:47" ph="..." />
-            <marker date="1563023668325" expanded="true" signature="79:218" ph="{...}" />
-            <marker date="1563023668325" expanded="true" signature="120:216" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataScience/Data/userItem.data">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -893,48 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataScience/Formulas/Pearson.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-          <folding>
-            <marker date="1563024395513" expanded="true" signature="6:47" ph="..." />
-            <marker date="1563024395513" expanded="true" signature="79:1795" ph="{...}" />
-            <marker date="1563024395513" expanded="true" signature="126:1793" ph="{...}" />
-            <marker date="1563024395513" expanded="true" signature="222:1787" ph="{...}" />
-            <marker date="1563024395513" expanded="true" signature="714:1041" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataScience/Formulas/Cosine.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
-          <folding>
-            <marker date="1563023668311" expanded="false" signature="6:61" ph="..." />
-            <marker date="1563023668311" expanded="true" signature="93:1075" ph="{...}" />
-            <marker date="1563023668311" expanded="true" signature="139:1073" ph="{...}" />
-            <marker date="1563023668311" expanded="true" signature="235:1067" ph="{...}" />
-            <marker date="1563023668311" expanded="true" signature="692:927" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataScience/Formulas/Euclidean.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-          <folding>
-            <marker date="1563024395517" expanded="true" signature="6:47" ph="..." />
-            <marker date="1563024395517" expanded="true" signature="79:796" ph="{...}" />
-            <marker date="1563024395517" expanded="true" signature="128:794" ph="{...}" />
-            <marker date="1563024395517" expanded="true" signature="224:788" ph="{...}" />
-            <marker date="1563024395517" expanded="true" signature="559:665" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataScience/Importer.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -956,74 +835,163 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataScience/Part1/FilterValues.cs">
+    <entry file="file://$PROJECT_DIR$/DataScience/Formulas/Euclidean.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="61" lean-forward="true" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
+          <folding>
+            <marker date="1563037887470" expanded="true" signature="6:47" ph="..." />
+            <marker date="1563037887470" expanded="true" signature="79:729" ph="{...}" />
+            <marker date="1563037887470" expanded="true" signature="128:727" ph="{...}" />
+            <marker date="1563037887470" expanded="true" signature="224:721" ph="{...}" />
+            <marker date="1563037887470" expanded="true" signature="522:626" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataScience/Formulas/Cosine.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <marker date="1563037888687" expanded="false" signature="6:61" ph="..." />
+            <marker date="1563037888687" expanded="true" signature="93:954" ph="{...}" />
+            <marker date="1563037888687" expanded="true" signature="139:952" ph="{...}" />
+            <marker date="1563037888687" expanded="true" signature="235:946" ph="{...}" />
+            <marker date="1563037888687" expanded="true" signature="625:846" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataScience/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+          <folding>
+            <marker date="1563037200860" expanded="true" signature="6:145" ph="..." />
+            <marker date="1563037200860" expanded="true" signature="168:4471" ph="{...}" />
+            <marker date="1563037200860" expanded="true" signature="190:4469" ph="{...}" />
+            <marker date="1563037200860" expanded="true" signature="243:4463" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataScience/Formulas/InterfaceDistance.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding>
-            <marker date="1563033308632" expanded="false" signature="6:66" ph="..." />
-            <marker date="1563033308632" expanded="true" signature="95:3099" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="127:3097" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="318:402" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="577:1297" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="795:1184" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="884:1170" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="966:1152" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="1422:3091" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="1676:2271" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="1755:1859" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="1925:2257" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="1991:2107" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="2132:2239" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="2325:2920" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="2404:2508" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="2574:2906" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="2640:2756" ph="{...}" />
-            <marker date="1563033308632" expanded="true" signature="2781:2888" ph="{...}" />
+            <marker date="1563037873183" expanded="false" signature="6:47" ph="..." />
+            <marker date="1563037873183" expanded="true" signature="79:217" ph="{...}" />
+            <marker date="1563037873183" expanded="true" signature="120:215" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataScience/Formulas/Pearson.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <folding>
+            <marker date="1563038024464" expanded="true" signature="6:47" ph="..." />
+            <marker date="1563038024464" expanded="true" signature="79:1623" ph="{...}" />
+            <marker date="1563038024464" expanded="true" signature="126:1621" ph="{...}" />
+            <marker date="1563038024464" expanded="true" signature="221:1615" ph="{...}" />
+            <marker date="1563038024464" expanded="true" signature="692:999" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataScience/Part1/Coefficient.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="45" />
+          <folding>
+            <marker date="1563038073336" expanded="false" signature="6:75" ph="..." />
+            <marker date="1563038073336" expanded="true" signature="104:872" ph="{...}" />
+            <marker date="1563038073336" expanded="true" signature="135:870" ph="{...}" />
+            <marker date="1563038073336" expanded="true" signature="361:742" ph="{...}" />
+            <marker date="1563038073336" expanded="true" signature="518:618" ph="{...}" />
+            <marker date="1563038073336" expanded="true" signature="635:732" ph="{...}" />
+            <marker date="1563038073336" expanded="true" signature="781:864" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataScience/Part1/FilterValues.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1634">
+          <caret line="88" column="1" lean-forward="true" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
+          <folding>
+            <marker date="1563038073333" expanded="false" signature="6:66" ph="..." />
+            <marker date="1563038073333" expanded="true" signature="95:3059" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="127:3057" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="318:402" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="577:1285" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="791:1176" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="880:1162" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="962:1144" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="1410:3051" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="1660:2245" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="1737:1839" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="1903:2231" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="1969:2083" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="2108:2213" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="2299:2884" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="2376:2478" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="2542:2870" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="2608:2722" ph="{...}" />
+            <marker date="1563038073333" expanded="true" signature="2747:2852" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataScience/Part1/NearestNeighbours.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-297">
+          <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+          <folding>
+            <marker date="1563038329312" expanded="false" signature="6:94" ph="..." />
+            <marker date="1563038329312" expanded="true" signature="123:2486" ph="{...}" />
+            <marker date="1563038329312" expanded="true" signature="160:2484" ph="{...}" />
+            <marker date="1563038329312" expanded="true" signature="601:777" ph="{...}" />
+            <marker date="1563038329312" expanded="true" signature="827:1266" ph="{...}" />
+            <marker date="1563038329312" expanded="true" signature="968:1172" ph="{...}" />
+            <marker date="1563038329312" expanded="true" signature="1015:1158" ph="{...}" />
+            <marker date="1563038329312" expanded="true" signature="1318:1365" ph="{...}" />
+            <marker date="1563038329312" expanded="true" signature="1464:2168" ph="{...}" />
+            <marker date="1563038329312" expanded="true" signature="1670:2017" ph="{...}" />
+            <marker date="1563038329312" expanded="true" signature="1918:2003" ph="{...}" />
+            <marker date="1563038329312" expanded="true" signature="2203:2478" ph="{...}" />
+            <marker date="1563038329312" expanded="true" signature="2301:2468" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataScience/Part1/PredictingRatings.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        <state relative-caret-position="1140">
+          <caret line="63" column="54" lean-forward="true" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="54" />
           <folding>
-            <marker date="1563033344473" expanded="false" signature="6:94" ph="..." />
-            <marker date="1563033344473" expanded="true" signature="123:2612" ph="{...}" />
-            <marker date="1563033344473" expanded="true" signature="160:2610" ph="{...}" />
-            <marker date="1563033344473" expanded="true" signature="498:664" ph="{...}" />
-            <marker date="1563033344473" expanded="true" signature="875:1675" ph="{...}" />
-            <marker date="1563033344473" expanded="true" signature="1050:1629" ph="{...}" />
-            <marker date="1563033344473" expanded="true" signature="1148:1615" ph="{...}" />
-            <marker date="1563033344473" expanded="true" signature="1320:1597" ph="{...}" />
-            <marker date="1563033344473" expanded="true" signature="1714:2604" ph="{...}" />
-            <marker date="1563033344473" expanded="true" signature="2134:2233" ph="{...}" />
-            <marker date="1563033344473" expanded="true" signature="2396:2512" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataScience/Part1/Similarity.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-          <folding>
-            <marker date="1563033344475" expanded="false" signature="6:75" ph="..." />
-            <marker date="1563033344475" expanded="true" signature="104:870" ph="{...}" />
-            <marker date="1563033344475" expanded="true" signature="134:868" ph="{...}" />
-            <marker date="1563033344475" expanded="true" signature="359:740" ph="{...}" />
-            <marker date="1563033344475" expanded="true" signature="516:616" ph="{...}" />
-            <marker date="1563033344475" expanded="true" signature="633:730" ph="{...}" />
-            <marker date="1563033344475" expanded="true" signature="779:862" ph="{...}" />
+            <marker date="1563038371144" expanded="false" signature="6:94" ph="..." />
+            <marker date="1563038371144" expanded="true" signature="123:2456" ph="{...}" />
+            <marker date="1563038371144" expanded="true" signature="160:2454" ph="{...}" />
+            <marker date="1563038371144" expanded="true" signature="498:664" ph="{...}" />
+            <marker date="1563038371144" expanded="true" signature="875:1531" ph="{...}" />
+            <marker date="1563038371144" expanded="true" signature="1049:1486" ph="{...}" />
+            <marker date="1563038371144" expanded="true" signature="1147:1472" ph="{...}" />
+            <marker date="1563038371144" expanded="true" signature="1319:1454" ph="{...}" />
+            <marker date="1563038371144" expanded="true" signature="1570:2448" ph="{...}" />
+            <marker date="1563038371144" expanded="true" signature="1984:2080" ph="{...}" />
+            <marker date="1563038371144" expanded="true" signature="2241:2356" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataScience/Part2/ItemItem.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+        <state relative-caret-position="686">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
           <folding>
             <marker date="1563033344466" expanded="false" signature="6:47" ph="..." />
             <marker date="1563033344466" expanded="true" signature="76:5516" ph="{...}" />
@@ -1056,54 +1024,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataScience/Part2/Normalize.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        <state relative-caret-position="266">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding>
-            <marker date="1563033344469" expanded="true" signature="27:415" ph="{...}" />
-            <marker date="1563033344469" expanded="true" signature="56:413" ph="{...}" />
-            <marker date="1563033344469" expanded="true" signature="154:233" ph="{...}" />
-            <marker date="1563033344469" expanded="true" signature="328:407" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataScience/Part1/NearestNeighbours.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-762">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding>
-            <marker date="1563033344471" expanded="true" signature="6:94" ph="..." />
-            <marker date="1563033344471" expanded="true" signature="123:2563" ph="{...}" />
-            <marker date="1563033344471" expanded="true" signature="160:2561" ph="{...}" />
-            <marker date="1563033344471" expanded="true" signature="623:821" ph="{...}" />
-            <marker date="1563033344471" expanded="true" signature="871:1323" ph="{...}" />
-            <marker date="1563033344471" expanded="true" signature="1012:1222" ph="{...}" />
-            <marker date="1563033344471" expanded="true" signature="1060:1208" ph="{...}" />
-            <marker date="1563033344471" expanded="true" signature="1375:1427" ph="{...}" />
-            <marker date="1563033344471" expanded="true" signature="1527:2237" ph="{...}" />
-            <marker date="1563033344471" expanded="true" signature="1736:2085" ph="{...}" />
-            <marker date="1563033344471" expanded="true" signature="1986:2071" ph="{...}" />
-            <marker date="1563033344471" expanded="true" signature="2280:2555" ph="{...}" />
-            <marker date="1563033344471" expanded="true" signature="2378:2545" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataScience/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <marker date="1563033308639" expanded="true" signature="6:145" ph="..." />
-            <marker date="1563033308639" expanded="true" signature="168:5216" ph="{...}" />
-            <marker date="1563033308639" expanded="true" signature="190:5214" ph="{...}" />
-            <marker date="1563033308639" expanded="true" signature="243:4504" ph="{...}" />
-            <marker date="1563033308639" expanded="true" signature="3773:4283" ph="{...}" />
-            <marker date="1563033308639" expanded="true" signature="3915:4269" ph="{...}" />
-            <marker date="1563033308639" expanded="true" signature="4023:4251" ph="{...}" />
-            <marker date="1563033308639" expanded="true" signature="4607:5208" ph="{...}" />
-            <marker date="1563033308639" expanded="true" signature="4889:5089" ph="{...}" />
-            <marker date="1563033308639" expanded="true" signature="4966:5067" ph="{...}" />
+            <marker date="1563038416148" expanded="true" signature="27:413" ph="{...}" />
+            <marker date="1563038416148" expanded="true" signature="56:411" ph="{...}" />
+            <marker date="1563038416148" expanded="true" signature="154:233" ph="{...}" />
+            <marker date="1563038416148" expanded="true" signature="328:405" ph="{...}" />
           </folding>
         </state>
       </provider>

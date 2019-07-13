@@ -9,7 +9,7 @@ namespace DataScience.Part2
 
         public static double DeNormalizeRating(double rating, double min = 1, double max = 5)
         {
-            return ((rating + 1) / 2) * (max - min) + min;
+            return (rating + 1) / 2 * (max - min) + min;
         }
     }
 }
