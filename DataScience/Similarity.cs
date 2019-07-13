@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace INFDTA021
+namespace DataScience
 {
     public class Similarity
     {
@@ -10,7 +10,7 @@ namespace INFDTA021
         private Dictionary<int, double> user2;
 
         // Set the user properties
-        public Similarity(Dictionary<int, double> user1, Dictionary<int, double> user2)
+        public Similarity(InterfaceDistance distance, Dictionary<int, double> user1, Dictionary<int, double> user2)
         {
             this.user1 = user1;
             this.user2 = user2;

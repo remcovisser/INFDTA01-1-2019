@@ -9,6 +9,7 @@
 /Users/remcovisser/Documents/DataScience/DataScience/obj/Debug/netcoreapp2.2/DataScience.AssemblyInfo.cs
 /Users/remcovisser/Documents/DataScience/DataScience/obj/Debug/netcoreapp2.2/DataScience.dll
 /Users/remcovisser/Documents/DataScience/DataScience/obj/Debug/netcoreapp2.2/DataScience.pdb
-/Users/remcovisser/Documents/DataScience/DataScience/bin/Debug/netcoreapp2.2/ratings.csv
-/Users/remcovisser/Documents/DataScience/DataScience/bin/Debug/netcoreapp2.2/userItem.data
-/Users/remcovisser/Documents/DataScience/DataScience/bin/Debug/netcoreapp2.2/itemItem.data
+/Users/remcovisser/Documents/DataScience/DataScience/bin/Debug/netcoreapp2.2/Data/itemItem.data
+/Users/remcovisser/Documents/DataScience/DataScience/bin/Debug/netcoreapp2.2/Data/itemItem2.data
+/Users/remcovisser/Documents/DataScience/DataScience/bin/Debug/netcoreapp2.2/Data/ratings.csv
+/Users/remcovisser/Documents/DataScience/DataScience/bin/Debug/netcoreapp2.2/Data/userItem.data

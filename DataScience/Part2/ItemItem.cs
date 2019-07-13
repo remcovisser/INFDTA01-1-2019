@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 
-namespace INFDTA021
+namespace DataScience.Part2
 {
     public class ItemItem
     {
@@ -111,7 +110,7 @@ namespace INFDTA021
             }
 
             double normalisedResult = numerator / denominator;
-            double result = DeNormalizeRating(normalisedResult);
+            double result = Normalize.DeNormalizeRating(normalisedResult);
 
             return result;
         }
@@ -123,20 +122,42 @@ namespace INFDTA021
 
             foreach (KeyValuePair<int, double> rating in userRatings)
             {
-                result.Add(rating.Key, NormalizeRating(rating.Value));
+                result.Add(rating.Key, Normalize.NormalizeRating(rating.Value));
             }
 
             return result;
         }
-
-        private double NormalizeRating(double rating, double min = 1, double max = 5)
+        
+        public Tuple<double, int> Deviation(int item1, int item2)
         {
-            return 2 * ((rating - min) / (max - min)) - 1;
+            int count = 0;
+            double deviation = 0;
+
+            foreach (KeyValuePair<int, Dictionary<int, double>> ratings in data)
+            {
+                if (ratings.Value.ContainsKey(item1) && ratings.Value.ContainsKey(item2))
+                {
+                    deviation += ratings.Value[item1] - ratings.Value[item2];
+                    count++;
+                }
+            }
+
+            return new Tuple<double, int>(deviation/count, count);
         }
 
-        private double DeNormalizeRating(double rating, double min = 1, double max = 5)
+        public double PredictionOneSlope(int user, int item)
         {
-            return ((rating + 1) / 2) * (max - min) + min;
+            double prediction = 0;
+            double bot = 0;
+
+            foreach (var ratings in data[user])
+            {
+                Tuple<double, int> deviation = Deviation(item, ratings.Key);
+                prediction += (ratings.Value + deviation.Item1) * deviation.Item2;
+                bot += deviation.Item2;
+            }
+
+            return prediction / bot;
         }
     }
 }

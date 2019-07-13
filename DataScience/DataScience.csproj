@@ -7,16 +7,25 @@
 
     <ItemGroup>
       <None Remove="ratings.csv" />
-      <Content Include="itemItem.data">
+      <Content Include="Data\itemItem.data">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
-      <Content Include="ratings.csv">
+      <Content Include="Data\itemItem2.data">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="Data\ratings.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="Data\userItem.data">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
       <None Remove="userItem.data" />
-      <Content Include="userItem.data">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
+      <None Remove="itemItem2.data" />
+      <None Remove="itmeItem2.data" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Similarity.cs" />
     </ItemGroup>
 
 </Project>

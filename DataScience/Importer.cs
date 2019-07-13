@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace INFDTA021
+namespace DataScience
 {
     public class Importer
     {

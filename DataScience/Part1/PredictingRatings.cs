@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DataScience.Formulas;
 
-namespace INFDTA021
+namespace DataScience.Part1
 {
     public class PredictingRatings
     {
@@ -10,12 +11,15 @@ namespace INFDTA021
         int product_id;
         int user_id;
         Dictionary<int, double> similarities;
+        InterfaceDistance distance;
 
-        public PredictingRatings(Dictionary<int, Dictionary<int, double>> data, int product_id, int user_id)
+        public PredictingRatings(InterfaceDistance distance, Dictionary<int, Dictionary<int, double>> data,
+            int product_id, int user_id)
         {
             this.data = data;
             this.product_id = product_id;
             this.user_id = user_id;
+            this.distance = distance;
         }
 
         // Filter out the information about the rating and product for an user if the user has not rated the current product
@@ -38,9 +42,9 @@ namespace INFDTA021
             return parsed_ratings;
         }
 
-        public double Pearson()
+        public double DoCalculation()
         {
-            similarities = new NearestNeighbours(data, user_id).Pearson().GetResult();
+            similarities = new NearestNeighbours(distance, data, user_id).DoCalculation().GetResult();
             Dictionary<double, double> ratings_parsed = FilterOutRatingsIfUserDidNotRateProduct();
             double sum_of_similarity = ratings_parsed.Keys.Sum();
 
