@@ -41,17 +41,14 @@ namespace DataScience.Part2
                     {
                         ratingItem2 = rating.Value;
                     }
-
-                    // If both ratings have been found
-                    if (ratingItem1 >= 0 && ratingItem2 >= 0)
-                    {
-                        break;
-                    }
                 }
 
-                ratingsParsed.Add(ratings.Key, new List<double> {ratingItem1, ratingItem2});
-                ratingsProduct1.Add(ratings.Key, ratingItem1);
-                ratingsProduct2.Add(ratings.Key, ratingItem2);
+                if (ratingItem1 > 0 && ratingItem2 > 0)
+                {
+                    ratingsParsed.Add(ratings.Key, new List<double> {ratingItem1, ratingItem2});
+                    ratingsProduct1.Add(ratings.Key, ratingItem1);
+                    ratingsProduct2.Add(ratings.Key, ratingItem2);
+                }
             }
 
             double numerator, denominator;

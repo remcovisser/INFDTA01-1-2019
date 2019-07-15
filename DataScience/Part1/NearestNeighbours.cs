@@ -61,7 +61,7 @@ namespace DataScience.Part1
             {
                 // Get tall the rated prdocuts from the current user
                 List<int> targetReatedProducts = data[i].Keys.ToList();
-                
+
                 // Check if the product if present in the similarities
                 // and if it is above the given threshold
                 // and if the product it not already present in the targetReatedProducts
@@ -85,8 +85,7 @@ namespace DataScience.Part1
             foreach (KeyValuePair<int, double> rating in result)
             {
                 index++;
-                Console.WriteLine("Nearest neighbour " + index + ": " + rating.Key + " with similarity " +
-                                  rating.Value);
+                Console.WriteLine("Neighbour " + index + " with product id = " + rating.Key + " has a similarity of " + rating.Value);
             }
         }
     }
