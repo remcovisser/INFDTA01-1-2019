@@ -5,15 +5,14 @@ namespace DataScience.Formulas
 {
     public class Euclidean : InterfaceDistance
     {
-        public double CalculateDistance(Tuple<List<double>, List<double>> parsed_ratings)
+        public double CalculateDistance(Tuple<List<double>, List<double>> parsedRatings)
         {
-            List<double> user1Ratings = parsed_ratings.Item1;
-            List<double> user2Ratings = parsed_ratings.Item2;
-            int n = user1Ratings.Count;
+            List<double> user1Ratings = parsedRatings.Item1;
+            List<double> user2Ratings = parsedRatings.Item2;
             double distance = 0.0;
 
             // Calculate the values using sigma
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < user1Ratings.Count; i++)
             {
                 distance += Math.Pow(user1Ratings[i] - user2Ratings[i], 2);
             }

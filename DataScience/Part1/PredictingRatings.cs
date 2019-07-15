@@ -61,8 +61,7 @@ namespace DataScience.Part1
                 i++;
             }
 
-            double total = weighted.Sum(item => item);
-            return total;
+            return weighted.Sum();
         }
     }
 }

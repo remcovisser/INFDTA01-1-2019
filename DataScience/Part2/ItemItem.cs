@@ -1,31 +1,22 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DataScience.Part2
 {
     public class ItemItem
     {
-        private Dictionary<int, Dictionary<int, double>> data;
+        Dictionary<int, Dictionary<int, double>> data;
 
         public ItemItem(Dictionary<int, Dictionary<int, double>> data)
         {
             this.data = data;
         }
 
-        public double UserAvarage(int userId)
+        // Calculate the average rating the user has given
+        public double UserAverage(int userId)
         {
-            Dictionary<int, double> userData = data[userId];
-            double avarage = 0;
-            int i = 0;
-            foreach (KeyValuePair<int, double> rating in userData)
-            {
-                avarage += rating.Value;
-                i += 1;
-            }
-
-            double result = avarage / i;
-
-            return result;
+            return data[userId].Values.Average();
         }
 
         public Tuple<double, int> Similarity(int productId1, int productId2)
@@ -50,25 +41,29 @@ namespace DataScience.Part2
                     {
                         ratingItem2 = rating.Value;
                     }
+
+                    // If both ratings have been found
+                    if (ratingItem1 >= 0 && ratingItem2 >= 0)
+                    {
+                        break;
+                    }
                 }
 
-                if (ratingItem1 != -1.0 && ratingItem2 != -1.0)
-                {
-                    ratingsParsed.Add(ratings.Key, new List<double> {ratingItem1, ratingItem2});
-                    ratingsProduct1.Add(ratings.Key, ratingItem1);
-                    ratingsProduct2.Add(ratings.Key, ratingItem2);
-                }
+                ratingsParsed.Add(ratings.Key, new List<double> {ratingItem1, ratingItem2});
+                ratingsProduct1.Add(ratings.Key, ratingItem1);
+                ratingsProduct2.Add(ratings.Key, ratingItem2);
             }
 
-            double numerator = 0;
-            double denominator = 0;
+            double numerator, denominator;
+            numerator = 0;
+
             foreach (KeyValuePair<int, List<double>> parsedRating in ratingsParsed)
             {
-                double avarage = UserAvarage(parsedRating.Key);
+                double average = UserAverage(parsedRating.Key);
                 var temp = 1.0;
                 foreach (var rating in parsedRating.Value)
                 {
-                    temp *= rating - avarage;
+                    temp *= rating - average;
                 }
 
                 numerator += temp;
@@ -77,31 +72,28 @@ namespace DataScience.Part2
             double denominatorLeft = 0;
             foreach (KeyValuePair<int, double> rating in ratingsProduct1)
             {
-                double avarage = UserAvarage(rating.Key);
-                denominatorLeft += Math.Pow(rating.Value - avarage, 2);
+                double average = UserAverage(rating.Key);
+                denominatorLeft += Math.Pow(rating.Value - average, 2);
             }
 
             double denominatorRight = 0;
             foreach (KeyValuePair<int, double> rating in ratingsProduct2)
             {
-                double avarage = UserAvarage(rating.Key);
-                denominatorRight += Math.Pow(rating.Value - avarage, 2);
+                double average = UserAverage(rating.Key);
+                denominatorRight += Math.Pow(rating.Value - average, 2);
             }
 
             denominator = Math.Sqrt(denominatorLeft) * Math.Sqrt(denominatorRight);
-
             double similarity = numerator / denominator;
-            int totalUsers = ratingsProduct1.Count;
-            Tuple<double, int> result = new Tuple<double, int>(similarity, totalUsers);
 
-            return result;
+            return new Tuple<double, int>(similarity, ratingsProduct1.Count);
         }
 
         public double PredictRating(int userId, int productId)
         {
             Dictionary<int, double> normalisedRatings = GetNormalisedRatings(userId);
-            double numerator = 0;
-            double denominator = 0;
+            double numerator, denominator;
+            numerator = denominator = 0;
 
             foreach (KeyValuePair<int, double> normalisedRating in normalisedRatings)
             {
@@ -109,25 +101,21 @@ namespace DataScience.Part2
                 denominator += Math.Abs(Similarity(productId, normalisedRating.Key).Item1);
             }
 
-            double normalisedResult = numerator / denominator;
-            double result = Normalize.DeNormalizeRating(normalisedResult);
-
-            return result;
+            return Normalize.DeNormalizeRating(numerator / denominator);
         }
 
         private Dictionary<int, double> GetNormalisedRatings(int userId)
         {
-            Dictionary<int, double> userRatings = data[userId];
             Dictionary<int, double> result = new Dictionary<int, double>();
 
-            foreach (KeyValuePair<int, double> rating in userRatings)
+            foreach (KeyValuePair<int, double> rating in data[userId])
             {
                 result.Add(rating.Key, Normalize.NormalizeRating(rating.Value));
             }
 
             return result;
         }
-        
+
         public Tuple<double, int> Deviation(int item1, int item2)
         {
             int count = 0;
@@ -142,13 +130,13 @@ namespace DataScience.Part2
                 }
             }
 
-            return new Tuple<double, int>(deviation/count, count);
+            return new Tuple<double, int>(deviation / count, count);
         }
 
         public double PredictionOneSlope(int user, int item)
         {
-            double prediction = 0;
-            double bot = 0;
+            double prediction, bot;
+            prediction = bot = 0;
 
             foreach (var ratings in data[user])
             {

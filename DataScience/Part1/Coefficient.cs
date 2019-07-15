@@ -14,6 +14,7 @@ namespace DataScience.Part1
             this.distance = distance;
             FilterValues filterValues = new FilterValues(user1, user2);
 
+            // Alter the data based on the used algorithm
             if (distance is Cosine)
             {
                 parsed_ratings = filterValues.TransformMissingToZero();

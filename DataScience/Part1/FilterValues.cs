@@ -15,20 +15,21 @@ namespace DataScience.Part1
             this.user2 = user2;
         }
 
-        // Filter out the ratings which are not present for both users (Euclidean, Manhattan, Pearson)
+        // Filter out the ratings which are not present for both users
         public Tuple<List<double>, List<double>> FilterMissingValues()
         {
+            // Initialise and set default values
             List<double> user1ParsedRatings = new List<double>();
             List<double> user2ParsedRatings = new List<double>();
 
-            foreach (KeyValuePair<int, double> user1_ratings in user1)
+            foreach (KeyValuePair<int, double> user1Ratings in user1)
             {
-                foreach (KeyValuePair<int, double> user2_ratings in user2)
+                foreach (KeyValuePair<int, double> user2Ratings in user2)
                 {
-                    if (user1_ratings.Key == user2_ratings.Key)
+                    if (user1Ratings.Key == user2Ratings.Key)
                     {
-                        user1ParsedRatings.Add(user1_ratings.Value);
-                        user2ParsedRatings.Add(user2_ratings.Value);
+                        user1ParsedRatings.Add(user1Ratings.Value);
+                        user2ParsedRatings.Add(user2Ratings.Value);
                     }
                 }
             }
@@ -36,54 +37,43 @@ namespace DataScience.Part1
             return new Tuple<List<double>, List<double>>(user1ParsedRatings, user2ParsedRatings);
         }
 
-        // Transform missing values to 0 (Cosine)
+        // Transform missing values to 0
         public Tuple<List<double>, List<double>> TransformMissingToZero()
         {
-            Dictionary<int, double> user1RatingsTransformed = new Dictionary<int, double>();
-            Dictionary<int, double> user2RatingsTransformed = new Dictionary<int, double>();
+            // Initialise and set default values
+            Dictionary<int, double> user1RatingsTransformed, user2RatingsTransformed;
+            user1RatingsTransformed = user2RatingsTransformed = new Dictionary<int, double>();
 
-            foreach (int key in user1.Keys.ToList())
+            // Loop trough all the ratings from both users to find out which user rated which product and set zero values if needed
+            foreach (KeyValuePair<int, double> user1Ratings in user1)
             {
-                if (!user2RatingsTransformed.ContainsKey(key))
+                foreach (KeyValuePair<int, double> user2Ratings in user2)
                 {
-                    user2RatingsTransformed.Add(key, user1[key]);
-                }
-
-                if (!user1RatingsTransformed.ContainsKey(key))
-                {
-                    if (user2.ContainsKey(key))
+                    // If user1 has rated the product but user2 did not
+                    if (user1.ContainsKey(user2Ratings.Key) && !user2.ContainsKey(user2Ratings.Key))
                     {
-                        user1RatingsTransformed.Add(key, user2[key]);
+                        user1RatingsTransformed[user2Ratings.Key] = user1Ratings.Value;
+                        user2RatingsTransformed[user2Ratings.Key] = 0;
                     }
+                    // If user2 has rated the product but user1 did not
+                    else if (!user1.ContainsKey(user2Ratings.Key) && user2.ContainsKey(user2Ratings.Key))
+                    {
+                        user1RatingsTransformed[user2Ratings.Key] = 0;
+                        user2RatingsTransformed[user2Ratings.Key] = user2Ratings.Value;
+                    }
+                    // If both users have rated the product
                     else
                     {
-                        user1RatingsTransformed.Add(key, 0);
+                        user1RatingsTransformed[user1Ratings.Key] = user1Ratings.Value;
+                        user2RatingsTransformed[user2Ratings.Key] = user2Ratings.Value;
                     }
                 }
             }
 
-            foreach (int key in user2.Keys.ToList())
-            {
-                if (!user1RatingsTransformed.ContainsKey(key))
-                {
-                    user1RatingsTransformed.Add(key, user2[key]);
-                }
-
-                if (!user2RatingsTransformed.ContainsKey(key))
-                {
-                    if (user1.ContainsKey(key))
-                    {
-                        user2RatingsTransformed.Add(key, user2[key]);
-                    }
-                    else
-                    {
-                        user2RatingsTransformed.Add(key, 0);
-                    }
-                }
-            }
-
-            return new Tuple<List<double>, List<double>>(user1RatingsTransformed.Values.ToList(),
-                user2RatingsTransformed.Values.ToList());
+            return new Tuple<List<double>, List<double>>(
+                user1RatingsTransformed.Values.ToList(),
+                user2RatingsTransformed.Values.ToList()
+            );
         }
     }
 }

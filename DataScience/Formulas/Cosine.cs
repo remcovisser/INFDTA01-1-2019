@@ -1,21 +1,21 @@
 using System;
 using System.Collections.Generic;
-using System;
 
 namespace DataScience.Formulas
 {
     public class Cosine : InterfaceDistance
     {
-        public double CalculateDistance(Tuple<List<double>, List<double>> parsed_ratings)
+        public double CalculateDistance(Tuple<List<double>, List<double>> parsedRatings)
         {
             // Get the parsed data
-            List<double> user1Ratings = parsed_ratings.Item1;
-            List<double> user2Ratings = parsed_ratings.Item2;
+            List<double> user1Ratings = parsedRatings.Item1;
+            List<double> user2Ratings = parsedRatings.Item2;
+
+            // Initialize variables and set default value
+            double sumOfXSquared, sumOfYSquared, sumOfXTimesY;
+            sumOfXSquared = sumOfYSquared = sumOfXTimesY = 0.0;
 
             // Calculate the values using sigma
-            double sumOfXSquared = 0.0;
-            double sumOfYSquared = 0;
-            double sumOfXTimesY = 0;
             for (int i = 0; i < user1Ratings.Count; i++)
             {
                 sumOfXTimesY += user1Ratings[i] * user2Ratings[i];

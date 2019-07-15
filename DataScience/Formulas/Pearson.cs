@@ -11,14 +11,11 @@ namespace DataScience.Formulas
             List<double> user2Ratings = parsedRatings.Item2;
             int n = user1Ratings.Count;
 
-            // Set default values
-            double sumOfX = 0;
-            double sumOfY = 0;
-            double sumOfXSquared = 0;
-            double sumOfYSquared = 0;
-            double sumOfXTimesY = 0;
+            // Initialize variables and set default value
+            double sumOfX, sumOfY, sumOfXSquared, sumOfYSquared, sumOfXTimesY;
+            sumOfX = sumOfY = sumOfXSquared = sumOfYSquared = sumOfXTimesY = 0.0;
 
-            // Calculate the values using sigma
+            // Calculate the values using Sigma
             for (int i = 0; i < n; i++)
             {
                 sumOfX += user1Ratings[i];

@@ -12,30 +12,34 @@ namespace DataScience.Part1
         int userId;
         int amount;
         Dictionary<int, double> result;
-        double treshhold;
+        double threshold;
 
 //         Set the user properties
         public NearestNeighbours(InterfaceDistance _distance, Dictionary<int, Dictionary<int, double>> _data,
             int _userId,
             int _amount = 3,
-            double _treshhold = 0.35)
+            double _threshold = 0.35)
         {
             distance = _distance;
             data = _data;
             userId = _userId;
             amount = _amount;
-            treshhold = _treshhold;
+            threshold = _threshold;
         }
 
         public NearestNeighbours DoCalculation()
         {
             Dictionary<int, double> similarities = new Dictionary<int, double>();
+
             for (int i = 1; i < data.Count; i++)
             {
-                if (i != userId)
+                // No need to calculate the similarity between the user and itself, it will always be 1
+                if (i == userId)
                 {
-                    similarities.Add(i, new Coefficient(distance, data[userId], data[i]).DoCalculation());
+                    continue;
                 }
+
+                similarities.Add(i, new Coefficient(distance, data[userId], data[i]).DoCalculation());
             }
 
             result = GetNearestNeighbours(similarities);
@@ -55,25 +59,34 @@ namespace DataScience.Part1
 
             for (int i = 1; i < data.Count; i++)
             {
-                List<int> target_reated_products = data[i].Keys.ToList();
-                if (similarities.ContainsKey(i) && similarities[i] > treshhold &&
-                    !userRatedProducts.SequenceEqual(target_reated_products))
+                // Get tall the rated prdocuts from the current user
+                List<int> targetReatedProducts = data[i].Keys.ToList();
+                
+                // Check if the product if present in the similarities
+                // and if it is above the given threshold
+                // and if the product it not already present in the targetReatedProducts
+                if (similarities.ContainsKey(i) &&
+                    similarities[i] > threshold &&
+                    !userRatedProducts.SequenceEqual(targetReatedProducts))
                 {
                     result[i] = similarities[i];
                 }
             }
 
+            // Get the results, order from high to low, take the given amount, build correct data structure
             return result.OrderByDescending(x => x.Value).Take(amount)
                 .ToDictionary(pair => pair.Key, pair => pair.Value);
         }
 
+        // Helper function to print the results
         public void PrintResult()
         {
-            int i = 1;
+            int index = 0;
             foreach (KeyValuePair<int, double> rating in result)
             {
-                Console.WriteLine("Nearest neighbour " + i + ": " + rating.Key + " with similarity " + rating.Value);
-                i++;
+                index++;
+                Console.WriteLine("Nearest neighbour " + index + ": " + rating.Key + " with similarity " +
+                                  rating.Value);
             }
         }
     }
