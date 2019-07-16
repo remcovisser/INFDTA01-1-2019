@@ -43,7 +43,7 @@ namespace DataScience.Part2
                     }
                 }
 
-                if (ratingItem1 > 0 && ratingItem2 > 0)
+                if (ratingItem1 >= 0 && ratingItem2 >= 0)
                 {
                     ratingsParsed.Add(ratings.Key, new List<double> {ratingItem1, ratingItem2});
                     ratingsProduct1.Add(ratings.Key, ratingItem1);

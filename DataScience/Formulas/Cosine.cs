@@ -15,7 +15,7 @@ namespace DataScience.Formulas
             double sumOfXSquared, sumOfYSquared, sumOfXTimesY;
             sumOfXSquared = sumOfYSquared = sumOfXTimesY = 0.0;
 
-            // Calculate the values using sigma
+            // Calculate the values for each rating
             for (int i = 0; i < user1Ratings.Count; i++)
             {
                 sumOfXTimesY += user1Ratings[i] * user2Ratings[i];

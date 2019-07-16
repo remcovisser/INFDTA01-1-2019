@@ -13,7 +13,7 @@ namespace DataScience
             // --------------------- Part 1 ---------------------
             Importer importer = new Importer();
 
-            // Set formulas
+            // Initialise formulas
             InterfaceDistance pearson = new Pearson();
             InterfaceDistance euclidean = new Euclidean();
             InterfaceDistance cosine = new Cosine();
@@ -63,7 +63,8 @@ namespace DataScience
             // Average
             Console.WriteLine("\n");
             Console.WriteLine("User 3 has an average rating of " + itemItem.UserAverage(3));
-            Console.WriteLine("User 3 has an average rating of " + itemItem.UserAverage(4));
+            Console.WriteLine("User 4 has an average rating of " + itemItem.UserAverage(4));
+            Console.WriteLine("User 5 has an average rating of " + itemItem.UserAverage(5));
 
 
             // Similarity

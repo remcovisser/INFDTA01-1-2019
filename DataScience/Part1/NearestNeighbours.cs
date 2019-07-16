@@ -14,7 +14,7 @@ namespace DataScience.Part1
         Dictionary<int, double> result;
         double threshold;
 
-//         Set the user properties
+        // Set the user properties
         public NearestNeighbours(InterfaceDistance _distance, Dictionary<int, Dictionary<int, double>> _data,
             int _userId,
             int _amount = 3,
@@ -64,18 +64,15 @@ namespace DataScience.Part1
 
                 // Check if the product if present in the similarities
                 // and if it is above the given threshold
-                // and if the product it not already present in the targetReatedProducts
-                if (similarities.ContainsKey(i) &&
-                    similarities[i] > threshold &&
-                    !userRatedProducts.SequenceEqual(targetReatedProducts))
+                // and if the user has rated another product then the target user
+                if (similarities.ContainsKey(i) && similarities[i] > threshold && !userRatedProducts.SequenceEqual(targetReatedProducts))
                 {
                     result[i] = similarities[i];
                 }
             }
 
             // Get the results, order from high to low, take the given amount, build correct data structure
-            return result.OrderByDescending(x => x.Value).Take(amount)
-                .ToDictionary(pair => pair.Key, pair => pair.Value);
+            return result.OrderByDescending(x => x.Value).Take(amount).ToDictionary(pair => pair.Key, pair => pair.Value);
         }
 
         // Helper function to print the results

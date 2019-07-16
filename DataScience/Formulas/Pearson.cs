@@ -26,8 +26,8 @@ namespace DataScience.Formulas
             }
 
             //  Calculate the rest of the values using the values from the loop
-            double avarageOfSumOfYSquared = sumOfY * sumOfY / n;
-            double avarageOfSumOfXSquared = sumOfX * sumOfX / n;
+            double avarageOfSumOfYSquared = Math.Pow(sumOfY, 2) / n;
+            double avarageOfSumOfXSquared = Math.Pow(sumOfX, 2) / n;
             double avarageOfSumOfXTimesSumOfY = sumOfX * sumOfY / n;
 
             // Calculate the final values

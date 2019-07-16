@@ -11,7 +11,7 @@ namespace DataScience.Formulas
             List<double> user2Ratings = parsedRatings.Item2;
             double distance = 0.0;
 
-            // Calculate the values using sigma
+            // Sum of user1Ratings i - user1Ratings2 i squared
             for (int i = 0; i < user1Ratings.Count; i++)
             {
                 distance += Math.Pow(user1Ratings[i] - user2Ratings[i], 2);

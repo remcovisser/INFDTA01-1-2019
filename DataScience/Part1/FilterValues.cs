@@ -42,49 +42,25 @@ namespace DataScience.Part1
         {
             Dictionary<int, double> user1RatingsTransformed = new Dictionary<int, double>();
             Dictionary<int, double> user2RatingsTransformed = new Dictionary<int, double>();
+            var value = 0.0;
 
-            foreach (int key in user1.Keys.ToList())
+            foreach (int key1 in user1.Keys.ToList())
             {
-                if (!user2RatingsTransformed.ContainsKey(key))
+                foreach (int key2 in user2.Keys.ToList())
                 {
-                    user2RatingsTransformed.Add(key, user1[key]);
-                }
-
-                if (!user1RatingsTransformed.ContainsKey(key))
-                {
-                    if (user2.ContainsKey(key))
+                    if (!user1RatingsTransformed.ContainsKey(key2))
                     {
-                        user1RatingsTransformed.Add(key, user2[key]);
+                        user1RatingsTransformed.Add(key2, user1.TryGetValue(key2, out value) ? user1[key2] : 0);
                     }
-                    else
+
+                    if (!user2RatingsTransformed.ContainsKey(key2))
                     {
-                        user1RatingsTransformed.Add(key, 0);
+                        user2RatingsTransformed.Add(key2, user2.TryGetValue(key2, out value) ? user2[key2] : 0);
                     }
                 }
             }
 
-            foreach (int key in user2.Keys.ToList())
-            {
-                if (!user1RatingsTransformed.ContainsKey(key))
-                {
-                    user1RatingsTransformed.Add(key, user2[key]);
-                }
-
-                if (!user2RatingsTransformed.ContainsKey(key))
-                {
-                    if (user1.ContainsKey(key))
-                    {
-                        user2RatingsTransformed.Add(key, user2[key]);
-                    }
-                    else
-                    {
-                        user2RatingsTransformed.Add(key, 0);
-                    }
-                }
-            }
-
-            return new Tuple<List<double>, List<double>>(user1RatingsTransformed.Values.ToList(),
-                user2RatingsTransformed.Values.ToList());
+            return new Tuple<List<double>, List<double>>(user1RatingsTransformed.Values.ToList(), user2RatingsTransformed.Values.ToList());
         }
     }
 }

@@ -15,14 +15,7 @@ namespace DataScience.Part1
             FilterValues filterValues = new FilterValues(user1, user2);
 
             // Alter the data based on the used algorithm
-            if (distance is Cosine)
-            {
-                parsed_ratings = filterValues.TransformMissingToZero();
-            }
-            else
-            {
-                parsed_ratings = filterValues.FilterMissingValues();
-            }
+            parsed_ratings = distance is Cosine ? filterValues.TransformMissingToZero() : filterValues.FilterMissingValues();
         }
 
         public double DoCalculation()

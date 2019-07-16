@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using DataScience.Formulas;
 
@@ -13,12 +12,11 @@ namespace DataScience.Part1
         Dictionary<int, double> similarities;
         InterfaceDistance distance;
 
-        public PredictingRatings(InterfaceDistance distance, Dictionary<int, Dictionary<int, double>> data,
-            int product_id, int user_id)
+        public PredictingRatings(InterfaceDistance distance, Dictionary<int, Dictionary<int, double>> data, int productId, int userId)
         {
             this.data = data;
-            this.product_id = product_id;
-            this.user_id = user_id;
+            product_id = productId;
+            user_id = userId;
             this.distance = distance;
         }
 
@@ -30,8 +28,7 @@ namespace DataScience.Part1
             {
                 foreach (KeyValuePair<int, Dictionary<int, double>> rating in data)
                 {
-                    if (rating.Key == similarity.Key && data.ContainsKey(rating.Key) &&
-                        data[rating.Key].ContainsKey(product_id))
+                    if (rating.Key == similarity.Key && data.ContainsKey(rating.Key) && data[rating.Key].ContainsKey(product_id))
                     {
                         parsedRatings.Add(similarity.Value, data[rating.Key][product_id]);
                     }
