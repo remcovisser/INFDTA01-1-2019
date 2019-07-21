@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace DataScience
+namespace DataScience.Data
 {
     public class Importer
     {
-        public Dictionary<int, Dictionary<int, double>> GetContent(string file)
+        public Dictionary<int, Dictionary<int, double>> GetContent(string path, string file, bool withOutZero = false)
         {
             // Get the data from the file and parse it to an array
-            var parsedData = File.ReadAllText(file).Split(new[] {"\r\n", "\r", "\n"}, StringSplitOptions.None);
+            var parsedData = File.ReadAllText(path + file).Split(new[] {"\r\n", "\r", "\n"}, StringSplitOptions.None);
             Dictionary<int, Dictionary<int, double>> data = new Dictionary<int, Dictionary<int, double>>();
+            List<int> uniqueProductKeys = new List<int>();
 
             foreach (string rawRating in parsedData)
             {
@@ -27,6 +28,11 @@ namespace DataScience
                 int articleId = Int32.Parse(ratingValues[1]);
                 double score = double.Parse(ratingValues[2]);
 
+                if (!uniqueProductKeys.Contains(articleId))
+                {
+                    uniqueProductKeys.Add(articleId);
+                }
+
                 // Only add the user_id to the dictionary once, without this check unnecessarily code is executed
                 if (!data.ContainsKey(userId))
                 {
@@ -39,18 +45,23 @@ namespace DataScience
                 userRatings.Add(articleId, score);
             }
 
-            return data;
+            if (withOutZero)
+            {
+                return data;
+            }
+
+            return AddNotRatedProducts(data, uniqueProductKeys);
         }
 
         // Function to read the CSV file with the Movielens data
-        public Dictionary<int, Dictionary<int, double>> GetMovielensData(string file)
+        public Dictionary<int, Dictionary<int, double>> GetMovielensData(string path, string file)
         {
             Dictionary<int, Dictionary<int, double>> data = new Dictionary<int, Dictionary<int, double>>();
-            using (var reader = new StreamReader(file))
+            using (var reader = new StreamReader(path + file))
             {
                 // If it is the fist line, skip it
                 reader.ReadLine();
-                
+
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
@@ -71,6 +82,24 @@ namespace DataScience
                     // Add the rating to the user ratings dictionary
                     Dictionary<int, double> userRatings = data[userId];
                     userRatings.Add(articleId, score);
+                }
+            }
+
+            return data;
+        }
+
+        private Dictionary<int, Dictionary<int, double>> AddNotRatedProducts(Dictionary<int, Dictionary<int, double>> data, List<int> uniqueProductKeys)
+        {
+            foreach (KeyValuePair<int, Dictionary<int, double>> userRatings in data)
+            {
+                foreach (int productId in uniqueProductKeys)
+                {
+                    if (!userRatings.Value.ContainsKey(productId))
+                    {
+                        var rating = new Dictionary<int, double>();
+                        rating.Add(productId, 0.0);
+                        data[userRatings.Key].Add(productId, 0.0);
+                    }
                 }
             }
 

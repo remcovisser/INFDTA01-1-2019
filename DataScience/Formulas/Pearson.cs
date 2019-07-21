@@ -10,6 +10,7 @@ namespace DataScience.Formulas
             List<double> user1Ratings = parsedRatings.Item1;
             List<double> user2Ratings = parsedRatings.Item2;
             int n = user1Ratings.Count;
+            int parsedProducts = 0;
 
             // Initialize variables and set default value
             double sumOfX, sumOfY, sumOfXSquared, sumOfYSquared, sumOfXTimesY;
@@ -18,6 +19,12 @@ namespace DataScience.Formulas
             // Calculate the values using Sigma
             for (int i = 0; i < n; i++)
             {
+                if (user1Ratings[i] == 0.0 || user2Ratings[i] == 0.0)
+                {
+                    continue;
+                }
+
+                parsedProducts++;
                 sumOfX += user1Ratings[i];
                 sumOfY += user2Ratings[i];
                 sumOfXSquared += Math.Pow(user1Ratings[i], 2);
@@ -26,9 +33,9 @@ namespace DataScience.Formulas
             }
 
             //  Calculate the rest of the values using the values from the loop
-            double avarageOfSumOfYSquared = Math.Pow(sumOfY, 2) / n;
-            double avarageOfSumOfXSquared = Math.Pow(sumOfX, 2) / n;
-            double avarageOfSumOfXTimesSumOfY = sumOfX * sumOfY / n;
+            double avarageOfSumOfYSquared = Math.Pow(sumOfY, 2) / parsedProducts;
+            double avarageOfSumOfXSquared = Math.Pow(sumOfX, 2) / parsedProducts;
+            double avarageOfSumOfXTimesSumOfY = sumOfX * sumOfY / parsedProducts;
 
             // Calculate the final values
             double x = sumOfXTimesY - avarageOfSumOfXTimesSumOfY;

@@ -79,6 +79,7 @@ namespace DataScience.Part1
         public void PrintResult()
         {
             int index = 0;
+            Console.WriteLine("\n");
             foreach (KeyValuePair<int, double> rating in result)
             {
                 index++;

@@ -14,6 +14,11 @@ namespace DataScience.Formulas
             // Sum of user1Ratings i - user1Ratings2 i squared
             for (int i = 0; i < user1Ratings.Count; i++)
             {
+                if (user1Ratings[i] == 0.0 || user2Ratings[i] == 0.0)
+                {
+                    continue;
+                }
+                
                 distance += Math.Pow(user1Ratings[i] - user2Ratings[i], 2);
             }
 
