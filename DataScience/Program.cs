@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using DataScience.Formulas;
 using DataScience.Part1;
 using DataScience.Part2;
@@ -13,7 +12,6 @@ namespace DataScience
         public static void Main(string[] args)
         {
             const int USER_ID = 7;
-
             const string dataPath = "../../DataScience/DataScience/Data/";
             const string userItemData = "userItem.data";
             const string movieLensData = "ratings.csv";
@@ -57,24 +55,24 @@ namespace DataScience
             var itemItem = new ItemItem(data);
 
             // Average
-            itemItem.PrintResultAverage();
+            itemItem.Average();
 
             // Similarity
-            itemItem.PrintResultSimilarity();
+            itemItem.Similarities();
 
             // Predicted rating ItemItem
-            itemItem.PrintResultPredictedRating();
+            itemItem.PredictedRatings();
 
             // OneSlope
             data = importer.GetContent(dataPath, itemItemData2, true);
             itemItem = new ItemItem(data);
 
             // Predicted rating OneSlope
-            itemItem.PrintResultPredictedOneSlope();
+            itemItem.PredictedOneSlope();
 
             // Predicted rating Movie lens data set
             itemItem = new ItemItem(dataMovieLens);
-            itemItem.PrintResultPredictedOneSlopeMovieLens(1, 31);
+            itemItem.PredictedOneSlopeMovieLens(1, 31);
         }
     }
 }

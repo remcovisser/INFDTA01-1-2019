@@ -32,27 +32,27 @@ namespace DataScience.Part2
 
             foreach (KeyValuePair<int, Dictionary<int, double>> ratings in data)
             {
-                double ratingItem1 = -1.0;
-                double ratingItem2 = -1.0;
+                double ratingproduct1 = -1.0;
+                double ratingproduct2 = -1.0;
 
                 foreach (KeyValuePair<int, double> rating in ratings.Value)
                 {
                     if (rating.Key == productId1)
                     {
-                        ratingItem1 = rating.Value;
+                        ratingproduct1 = rating.Value;
                     }
 
                     if (rating.Key == productId2)
                     {
-                        ratingItem2 = rating.Value;
+                        ratingproduct2 = rating.Value;
                     }
                 }
 
-                if (ratingItem1 >= 0 && ratingItem2 >= 0)
+                if (ratingproduct1 >= 0 && ratingproduct2 >= 0)
                 {
-                    ratingsParsed.Add(ratings.Key, new List<double> {ratingItem1, ratingItem2});
-                    ratingsProduct1.Add(ratings.Key, ratingItem1);
-                    ratingsProduct2.Add(ratings.Key, ratingItem2);
+                    ratingsParsed.Add(ratings.Key, new List<double> {ratingproduct1, ratingproduct2});
+                    ratingsProduct1.Add(ratings.Key, ratingproduct1);
+                    ratingsProduct2.Add(ratings.Key, ratingproduct2);
                 }
             }
 
@@ -118,16 +118,16 @@ namespace DataScience.Part2
             return result;
         }
 
-        public Tuple<double, int> Deviation(int item1, int item2)
+        public Tuple<double, int> Deviation(int product1, int product2)
         {
             int count = 0;
             double deviation = 0;
 
             foreach (KeyValuePair<int, Dictionary<int, double>> ratings in data)
             {
-                if (ratings.Value.ContainsKey(item1) && ratings.Value.ContainsKey(item2))
+                if (ratings.Value.ContainsKey(product1) && ratings.Value.ContainsKey(product2))
                 {
-                    deviation += ratings.Value[item1] - ratings.Value[item2];
+                    deviation += ratings.Value[product1] - ratings.Value[product2];
                     count++;
                 }
             }
@@ -154,89 +154,80 @@ namespace DataScience.Part2
         {
             List<int> itemIds = new List<int>();
 
-            data.Values.ToList().ForEach(
-                ratings => ratings.Keys.ToList().ForEach(
-                    itemId =>
-                    {
-                        if (!itemIds.Contains(itemId))
-                        {
-                            itemIds.Add(itemId);
-                        }
-                    }
-                )
-            );
+            foreach (Dictionary<int, double> rating in data.Values)
+            {
+                List<int> keys = rating.Keys.ToList();
+                itemIds.AddRange(keys);
+            }
 
+            itemIds = itemIds.Distinct().ToList();
             itemIds.Sort();
+
             return itemIds;
         }
 
-        public void PrintResultAverage()
+        public void Average()
         {
             Console.WriteLine("\n");
-            foreach (var userId in data.Keys)
+            foreach (int userId in data.Keys)
             {
                 Console.WriteLine("User " + userId + " has an average rating of " + UserAverage(userId));
             }
         }
 
-
-        public void PrintResultSimilarity()
+        public void Similarities()
         {
             List<int> itemIds = GetUniqueItemIds();
+            int itemIdsCount = itemIds.Count;
 
             Console.WriteLine("\n");
-            for (var itemId1 = 0; itemId1 < itemIds.Count; itemId1++)
+            for (var productIndex1 = 0; productIndex1 < itemIdsCount; productIndex1++)
             {
-                var item1 = itemIds[itemId1];
-
-                for (var itemId2 = itemId1 + 1; itemId2 < itemIds.Count; itemId2++)
+                int product1 = itemIds[productIndex1];
+                for (int productIndex2 = 0; productIndex2 < itemIdsCount; productIndex2++)
                 {
-                    var item2 = itemIds[itemId2];
-                    var similarity = Similarity(item1, item2);
+                    // No need to calculate the similarity between the same items, since that will always be 1
+                    if (productIndex1 == productIndex2)
+                    {
+                        break;
+                    }
 
-                    Console.WriteLine("Similarity between item " + item1 + " and " + item2 + " = " + similarity.Item1 + " (" + similarity.Item2 + ")");
+                    int product2 = itemIds[productIndex2];
+                    Tuple<double, int> similarity = Similarity(product1, product2);
+
+                    Console.WriteLine("Similarity between product " + product1 + " and " + product2 + " = " + similarity.Item1 + " (" + similarity.Item2 + ")");
                 }
             }
         }
 
-        public void PrintResultPredictedRating()
+        public void Predicted(Func<int, int, double> func, string extra = "")
         {
-            List<int> itemIds = GetUniqueItemIds();
+            var itemIds = GetUniqueItemIds();
 
             Console.WriteLine("\n");
             foreach (var (userId, ratings) in data)
             {
-                foreach (var itemId in itemIds)
+                foreach (int itemId in itemIds)
                 {
                     if (!ratings.Keys.Contains(itemId))
                     {
-                        Console.WriteLine("Predicted rating for user " + userId + " for product " + itemId + " = " + PredictRating(userId, itemId));
+                        Console.WriteLine("Predicted rating " + extra + "for user " + userId + " for product " + itemId + " = " + func(userId, itemId));
                     }
                 }
             }
         }
 
-        public void PrintResultPredictedOneSlope()
+        public void PredictedOneSlope()
         {
-            var slopeItemIds = GetUniqueItemIds();
-
-            Console.WriteLine("\n");
-            foreach (var (userId, ratings) in data)
-            {
-                // alle ID's
-                var ratingIds = ratings.Keys;
-                foreach (var itemId in slopeItemIds)
-                {
-                    // PredictRating
-                    if (!ratingIds.Contains(itemId))
-                    {
-                        Console.WriteLine("Predicted rating with Oneslope for user " + userId + " for product " + itemId + " = " + PredictionOneSlope(userId, itemId));
-                    }
-                }
-            }
+            Predicted(PredictionOneSlope, "with Oneslope ");
         }
 
-        public void PrintResultPredictedOneSlopeMovieLens(int userId, int productId)
+        public void PredictedRatings()
+        {
+            Predicted(PredictRating);
+        }
+
+        public void PredictedOneSlopeMovieLens(int userId, int productId)
         {
             Console.WriteLine("\n");
             Console.WriteLine("Predicted rating with Oneslope for user 1 for product 31 = " + PredictionOneSlope(userId, productId));
