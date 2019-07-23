@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DataScience.Formulas;
 
-namespace DataScience.Part1
+namespace DataScience.User_item
 {
     public class NearestNeighbours
     {
@@ -11,7 +11,6 @@ namespace DataScience.Part1
         InterfaceDistance distance;
         int userId;
         int amount;
-        Dictionary<int, double> result;
         double threshold;
 
         // Set the user properties
@@ -27,7 +26,7 @@ namespace DataScience.Part1
             threshold = _threshold;
         }
 
-        public NearestNeighbours DoCalculation()
+        public Dictionary<int, double> DoCalculation(bool print = false)
         {
             Dictionary<int, double> similarities = new Dictionary<int, double>();
 
@@ -42,17 +41,10 @@ namespace DataScience.Part1
                 similarities.Add(i, new Coefficient(distance, data[userId], data[i]).DoCalculation());
             }
 
-            result = GetNearestNeighbours(similarities);
-
-            return this;
+            return GetNearestNeighbours(similarities, print);
         }
 
-        public Dictionary<int, double> GetResult()
-        {
-            return result;
-        }
-
-        public Dictionary<int, double> GetNearestNeighbours(Dictionary<int, double> similarities)
+        public Dictionary<int, double> GetNearestNeighbours(Dictionary<int, double> similarities, bool print)
         {
             Dictionary<int, double> result = new Dictionary<int, double>();
             List<int> userRatedProducts = data[userId].Keys.ToList();
@@ -72,11 +64,18 @@ namespace DataScience.Part1
             }
 
             // Get the results, order from high to low, take the given amount, build correct data structure
-            return result.OrderByDescending(x => x.Value).Take(amount).ToDictionary(pair => pair.Key, pair => pair.Value);
+            result = result.OrderByDescending(x => x.Value).Take(amount).ToDictionary(pair => pair.Key, pair => pair.Value);
+
+            if (print)
+            {
+                PrintResult(result);
+            }
+
+            return result;
         }
 
         // Helper function to print the results
-        public void PrintResult()
+        public void PrintResult(Dictionary<int, double> result)
         {
             int index = 0;
             Console.WriteLine("\n");

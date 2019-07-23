@@ -1,4 +1,4 @@
-namespace DataScience.Part2
+namespace DataScience.Item_item
 {
     public class Normalize
     {

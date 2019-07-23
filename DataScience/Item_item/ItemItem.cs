@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DataScience.Part2
+namespace DataScience.Item_item
 {
     public class ItemItem
     {
@@ -166,21 +166,30 @@ namespace DataScience.Part2
             return itemIds;
         }
 
-        public void Average()
+        public Dictionary<int, double> Average(bool print = false)
         {
-            Console.WriteLine("\n");
+            Dictionary<int, double> result = new Dictionary<int, double>();
+
             foreach (int userId in data.Keys)
             {
-                Console.WriteLine("User " + userId + " has an average rating of " + UserAverage(userId));
+                var average = UserAverage(userId);
+                result.Add(userId, average);
             }
+
+            if (print)
+            {
+                PrintResults.PrintAverages(result);
+            }
+
+            return result;
         }
 
-        public void Similarities()
+        public Dictionary<Tuple<int, int>, Tuple<double, int>> Similarities(bool print = false)
         {
             List<int> itemIds = GetUniqueItemIds();
             int itemIdsCount = itemIds.Count;
+            Dictionary<Tuple<int, int>, Tuple<double, int>> result = new Dictionary<Tuple<int, int>, Tuple<double, int>>();
 
-            Console.WriteLine("\n");
             for (var productIndex1 = 0; productIndex1 < itemIdsCount; productIndex1++)
             {
                 int product1 = itemIds[productIndex1];
@@ -193,44 +202,65 @@ namespace DataScience.Part2
                     }
 
                     int product2 = itemIds[productIndex2];
-                    Tuple<double, int> similarity = Similarity(product1, product2);
 
-                    Console.WriteLine("Similarity between product " + product1 + " and " + product2 + " = " + similarity.Item1 + " (" + similarity.Item2 + ")");
+                    Tuple<int, int> products = new Tuple<int, int>(product1, product2);
+                    Tuple<double, int> similarity = Similarity(product1, product2);
+                    result.Add(products, similarity);
                 }
             }
+
+            if (print)
+            {
+                PrintResults.PrintSimilarities(result);
+            }
+
+            return result;
         }
 
-        public void Predicted(Func<int, int, double> func, string extra = "")
+        public Dictionary<int, Tuple<int, double>> AddPredictedRatingToResult(Func<int, int, double> func, bool print, string extra = "")
         {
             var itemIds = GetUniqueItemIds();
+            Dictionary<int, Tuple<int, double>> result = new Dictionary<int, Tuple<int, double>>();
 
-            Console.WriteLine("\n");
             foreach (var (userId, ratings) in data)
             {
                 foreach (int itemId in itemIds)
                 {
                     if (!ratings.Keys.Contains(itemId))
                     {
-                        Console.WriteLine("Predicted rating " + extra + "for user " + userId + " for product " + itemId + " = " + func(userId, itemId));
+                        result.Add(userId, new Tuple<int, double>(itemId, func(userId, itemId)));
                     }
                 }
             }
+
+            if (print)
+            {
+                PrintResults.PrintPredictedRating(result, extra);
+            }
+
+            return result;
         }
 
-        public void PredictedOneSlope()
+        public void PredictedOneSlope(bool print = false)
         {
-            Predicted(PredictionOneSlope, "with Oneslope ");
+            AddPredictedRatingToResult(PredictionOneSlope, print, "with Oneslope ");
         }
 
-        public void PredictedRatings()
+        public void PredictedRatings(bool print = false)
         {
-            Predicted(PredictRating);
+            AddPredictedRatingToResult(PredictRating, print);
         }
 
-        public void PredictedOneSlopeMovieLens(int userId, int productId)
+        public double PredictedOneSlopeMovieLens(int userId, int productId, bool print = false)
         {
-            Console.WriteLine("\n");
-            Console.WriteLine("Predicted rating with Oneslope for user 1 for product 31 = " + PredictionOneSlope(userId, productId));
+            double result = PredictionOneSlope(userId, productId);
+
+            if (print)
+            {
+                PrintResults.PrintPredictedRatingMoiveLens(userId, productId, result);
+            }
+
+            return result;
         }
     }
 }

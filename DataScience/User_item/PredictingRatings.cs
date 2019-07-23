@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using DataScience.Formulas;
 
-namespace DataScience.Part1
+namespace DataScience.User_item
 {
     public class PredictingRatings
     {
         Dictionary<int, Dictionary<int, double>> data;
         Dictionary<int, double> similarities;
-        Dictionary<int, double> result = new Dictionary<int, double>();
         InterfaceDistance distance;
         int userId;
 
@@ -37,8 +36,9 @@ namespace DataScience.Part1
             return parsedRatings;
         }
 
-        public PredictingRatings DoCalculation()
+        public Dictionary<int, double> DoCalculation(bool print = false)
         {
+            Dictionary<int, double> result = new Dictionary<int, double>();
             var userRatings = data[userId];
 
             foreach (KeyValuePair<int, double> productRating in userRatings)
@@ -50,7 +50,7 @@ namespace DataScience.Part1
                     continue;
                 }
 
-                similarities = new NearestNeighbours(distance, data, userId).DoCalculation().GetResult();
+                similarities = new NearestNeighbours(distance, data, userId).DoCalculation();
                 Dictionary<double, double> ratingsParsed = FilterOutRatingsIfUserDidNotRateProduct(productId);
 
                 var sumOfSimilarityTimesRating = 0.0;
@@ -71,10 +71,15 @@ namespace DataScience.Part1
 
             result = result.OrderByDescending(x => x.Value).ToDictionary(pair => pair.Key, pair => pair.Value);
 
-            return this;
+            if (print)
+            {
+                PrintResult(result);
+            }
+
+            return result;
         }
 
-        public void PrintResult()
+        public void PrintResult(Dictionary<int, double> result)
         {
             Console.WriteLine("\n");
             foreach (var predictedRating in result)

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DataScience.Part1
+namespace DataScience.User_item
 {
     public class FilterValues
     {

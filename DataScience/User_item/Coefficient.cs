@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using DataScience.Formulas;
 
-namespace DataScience.Part1
+namespace DataScience.User_item
 {
     public class Coefficient
     {
