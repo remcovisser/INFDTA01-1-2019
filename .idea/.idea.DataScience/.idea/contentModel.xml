@@ -21,7 +21,6 @@
         <e p="Item_item" t="Include">
           <e p="ItemItem.cs" t="Include" />
           <e p="Normalize.cs" t="Include" />
-          <e p="PrintResults.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -30,9 +29,11 @@
             </e>
           </e>
         </e>
+        <e p="PrintResults.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="User_item" t="Include">
           <e p="Coefficient.cs" t="Include" />
+          <e p="Distance.cs" t="Include" />
           <e p="FilterValues.cs" t="Include" />
           <e p="NearestNeighbours.cs" t="Include" />
           <e p="PredictingRatings.cs" t="Include" />

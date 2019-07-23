@@ -1,10 +1,39 @@
 using System;
 using System.Collections.Generic;
 
-namespace DataScience.Item_item
+namespace DataScience
 {
     public static class PrintResults
     {
+        public static void PrintDistances(Dictionary<int, double> results, int userId)
+        {
+            Console.WriteLine("\n");
+            foreach (KeyValuePair<int, double> result in results)
+            {
+                Console.WriteLine("Pearson coefficient between users " + userId + " and " + result.Key + " and " + result.Value + ": ");
+            }
+        }
+        
+        public static void PrintPredictedRatings(Dictionary<int, double> result, int userId)
+        {
+            Console.WriteLine("\n");
+            foreach (var predictedRating in result)
+            {
+                Console.WriteLine("Predict the rating that user " + userId + " would give to items " + predictedRating.Key + " = " + predictedRating.Value);
+            }
+        }
+        
+        public static void PrintNearestNeighbours(Dictionary<int, double> result)
+        {
+            int index = 0;
+            Console.WriteLine("\n");
+            foreach (KeyValuePair<int, double> rating in result)
+            {
+                index++;
+                Console.WriteLine("Neighbour " + index + " with product id = " + rating.Key + " has a similarity of " + rating.Value);
+            }
+        }
+        
         public static void PrintAverages(Dictionary<int, double> results)
         {
             Console.WriteLine("\n");
@@ -23,7 +52,7 @@ namespace DataScience.Item_item
             }
         }
 
-        public static void PrintPredictedRating(Dictionary<int, Tuple<int, double>> results, string extra)
+        public static void PrintPredictedRatingOneSlope(Dictionary<int, Tuple<int, double>> results, string extra)
         {
             Console.WriteLine("\n");
             foreach (KeyValuePair<int, Tuple<int, double>> result in results)

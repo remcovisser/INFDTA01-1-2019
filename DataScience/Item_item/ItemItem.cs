@@ -235,7 +235,7 @@ namespace DataScience.Item_item
 
             if (print)
             {
-                PrintResults.PrintPredictedRating(result, extra);
+                PrintResults.PrintPredictedRatingOneSlope(result, extra);
             }
 
             return result;

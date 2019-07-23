@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using DataScience.Formulas;
 
@@ -68,22 +67,10 @@ namespace DataScience.User_item
 
             if (print)
             {
-                PrintResult(result);
+                PrintResults.PrintNearestNeighbours(result);
             }
 
             return result;
-        }
-
-        // Helper function to print the results
-        public void PrintResult(Dictionary<int, double> result)
-        {
-            int index = 0;
-            Console.WriteLine("\n");
-            foreach (KeyValuePair<int, double> rating in result)
-            {
-                index++;
-                Console.WriteLine("Neighbour " + index + " with product id = " + rating.Key + " has a similarity of " + rating.Value);
-            }
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using DataScience.Formulas;
 using DataScience.User_item;
 using DataScience.Item_item;
@@ -29,26 +28,9 @@ namespace DataScience
             // --------------------- User Item---------------------
             Dictionary<int, Dictionary<int, double>> data = importer.GetContent(dataPath, userItemData);
 
-            for (int i = 1; i < data.Count; i++)
-            {
-                if (!PRINT)
-                {
-                    break;
-                }
-
-                Console.WriteLine("Pearson coefficient between users 7 and " + i + ": " + new Coefficient(pearson, data[USER_ID], data[i]).DoCalculation());
-            }
-
-            Console.WriteLine("\n");
-            for (int i = 1; i < data.Count; i++)
-            {
-                if (!PRINT)
-                {
-                    break;
-                }
-
-                Console.WriteLine("Euclidean coefficient between users 7 and " + i + ": " + new Coefficient(euclidean, data[USER_ID], data[i]).DoCalculation());
-            }
+            // Distance
+            new Distance(pearson, data, USER_ID).DoCalculation(PRINT);
+            new Distance(euclidean, data, USER_ID).DoCalculation(PRINT);
 
             // Predicted rating 
             new PredictingRatings(pearson, data, USER_ID).DoCalculation(PRINT);

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using DataScience.Formulas;
 
@@ -73,19 +72,10 @@ namespace DataScience.User_item
 
             if (print)
             {
-                PrintResult(result);
+                PrintResults.PrintPredictedRatings(result, userId);
             }
 
             return result;
-        }
-
-        public void PrintResult(Dictionary<int, double> result)
-        {
-            Console.WriteLine("\n");
-            foreach (var predictedRating in result)
-            {
-                Console.WriteLine("Predict the rating that user " + userId + " would give to items " + predictedRating.Key + " = " + predictedRating.Value);
-            }
         }
     }
 }
