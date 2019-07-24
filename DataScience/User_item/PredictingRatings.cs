@@ -29,7 +29,7 @@ namespace DataScience.User_item
                 {
                     if (rating.Key == similarity.Key && data.ContainsKey(rating.Key) && data[rating.Key].ContainsKey(product_id))
                     {
-                        parsedRatings.Add(key, new Tuple<double, double>(similarity.Value, data[rating.Key][product_id]));
+                        parsedRatings.Add(similarity.Key, new Tuple<double, double>(similarity.Value, data[rating.Key][product_id]));
                         key++;
                     }
                 }
