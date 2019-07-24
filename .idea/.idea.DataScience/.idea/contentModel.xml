@@ -9,6 +9,7 @@
           <e p="itemItem.data" t="Include" />
           <e p="itemItem2.data" t="Include" />
           <e p="ratings.csv" t="Include" />
+          <e p="ratingsSmall.csv" t="Include" />
           <e p="userItem.data" t="Include" />
         </e>
         <e p="DataScience.csproj" t="IncludeRecursive" />

@@ -54,9 +54,11 @@ namespace DataScience.Data
         }
 
         // Function to read the CSV file with the Movielens data
-        public Dictionary<int, Dictionary<int, double>> GetMovielensData(string path, string file)
+        public Dictionary<int, Dictionary<int, double>> GetMovielensData(string path, string file, bool withOutZero = false)
         {
             Dictionary<int, Dictionary<int, double>> data = new Dictionary<int, Dictionary<int, double>>();
+            List<int> uniqueProductKeys = new List<int>();
+            
             using (var reader = new StreamReader(path + file))
             {
                 // If it is the fist line, skip it
@@ -71,6 +73,11 @@ namespace DataScience.Data
                     int userId = Int32.Parse(values[0]);
                     int articleId = Int32.Parse(values[1]);
                     double score = double.Parse(values[2]);
+                    
+                    if (!uniqueProductKeys.Contains(articleId))
+                    {
+                        uniqueProductKeys.Add(articleId);
+                    }
 
                     // Only add the userId to the dictionary once
                     if (!data.ContainsKey(userId))
@@ -85,7 +92,12 @@ namespace DataScience.Data
                 }
             }
 
-            return data;
+            if (withOutZero)
+            {
+                return data;
+            }
+
+            return AddNotRatedProducts(data, uniqueProductKeys);
         }
 
         private Dictionary<int, Dictionary<int, double>> AddNotRatedProducts(Dictionary<int, Dictionary<int, double>> data, List<int> uniqueProductKeys)

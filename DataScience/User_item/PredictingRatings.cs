@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using DataScience.Formulas;
 
@@ -18,22 +19,26 @@ namespace DataScience.User_item
             this.userId = userId;
         }
 
-        private Dictionary<double, double> FilterOutRatingsIfUserDidNotRateProduct(int product_id)
+        private Dictionary<int, Tuple<double, double>> FilterOutRatingsIfUserDidNotRateProduct(int product_id)
         {
-            Dictionary<double, double> parsedRatings = new Dictionary<double, double>();
+            Dictionary<int, Tuple<double, double>> parsedRatings = new Dictionary<int, Tuple<double, double>>();
+            int key = 0;
             foreach (KeyValuePair<int, double> similarity in similarities)
             {
                 foreach (KeyValuePair<int, Dictionary<int, double>> rating in data)
                 {
                     if (rating.Key == similarity.Key && data.ContainsKey(rating.Key) && data[rating.Key].ContainsKey(product_id))
                     {
-                        parsedRatings.Add(similarity.Value, data[rating.Key][product_id]);
+                        parsedRatings.Add(key, new Tuple<double, double>(similarity.Value, data[rating.Key][product_id]));
+                        key++;
                     }
                 }
             }
 
             return parsedRatings;
         }
+        
+        
 
         public Dictionary<int, double> DoCalculation(bool print = false)
         {
@@ -50,16 +55,16 @@ namespace DataScience.User_item
                 }
 
                 similarities = new NearestNeighbours(distance, data, userId).DoCalculation();
-                Dictionary<double, double> ratingsParsed = FilterOutRatingsIfUserDidNotRateProduct(productId);
+                Dictionary<int, Tuple<double, double>> ratingsParsed = FilterOutRatingsIfUserDidNotRateProduct(productId);
 
                 var sumOfSimilarityTimesRating = 0.0;
                 var sumOfRatings = 0.0;
                 foreach (var rating in ratingsParsed)
                 {
-                    sumOfSimilarityTimesRating += rating.Key * rating.Value;
-                    if (rating.Value > 0)
+                    sumOfSimilarityTimesRating += rating.Value.Item1 * rating.Value.Item2;
+                    if (rating.Value.Item2 > 0)
                     {
-                        sumOfRatings += rating.Key;
+                        sumOfRatings += rating.Value.Item1;
                     }
                 }
 
@@ -68,7 +73,7 @@ namespace DataScience.User_item
                 result.Add(productId, predictedRating);
             }
 
-            result = result.OrderByDescending(x => x.Value).ToDictionary(pair => pair.Key, pair => pair.Value);
+            result = result.OrderByDescending(x => x.Value).Take(10).ToDictionary(pair => pair.Key, pair => pair.Value);
 
             if (print)
             {
