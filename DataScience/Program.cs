@@ -49,6 +49,7 @@ namespace DataScience
 
             // Average
             itemItem.Average(PRINT);
+//            Alternatieve manier:
 //            var averages = itemItem.Average();
 //            PrintResults.PrintAverages(averages);
 

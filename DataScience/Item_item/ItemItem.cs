@@ -16,7 +16,7 @@ namespace DataScience.Item_item
         // Calculate the average rating the user has given
         public double UserAverage(int userId)
         {
-            foreach (var item in data[userId].Where(kvp => kvp.Value == 0.0).ToList())
+            foreach (var item in data[userId].Where(rating => rating.Value == 0.0).ToList())
             {
                 data[userId].Remove(item.Key);
             }

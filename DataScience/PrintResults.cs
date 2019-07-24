@@ -13,7 +13,7 @@ namespace DataScience
                 Console.WriteLine("Pearson coefficient between users " + userId + " and " + result.Key + " and " + result.Value + ": ");
             }
         }
-        
+
         public static void PrintPredictedRatings(Dictionary<int, double> result, int userId)
         {
             Console.WriteLine("\n");
@@ -22,7 +22,7 @@ namespace DataScience
                 Console.WriteLine("Predict the rating that user " + userId + " would give to items " + predictedRating.Key + " = " + predictedRating.Value);
             }
         }
-        
+
         public static void PrintNearestNeighbours(Dictionary<int, double> result)
         {
             int index = 0;
@@ -33,7 +33,7 @@ namespace DataScience
                 Console.WriteLine("Neighbour " + index + " with product id = " + rating.Key + " has a similarity of " + rating.Value);
             }
         }
-        
+
         public static void PrintAverages(Dictionary<int, double> results)
         {
             Console.WriteLine("\n");
